@@ -1,0 +1,8 @@
+# Activar la reescritura de URLs
+RewriteEngine On
+
+# Eliminar .html de las URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ $1.html [L]
+RewriteRule ^(.*)$ $1.html [L]
